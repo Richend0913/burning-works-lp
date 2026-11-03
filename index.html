@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1729'/%3E%3Ctext x='16' y='22' font-size='15' text-anchor='middle' fill='%232f6df0' font-family='sans-serif'%3EW%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"業務システム受託開発（台帳・配車・点呼・請求・日報）","provider":{"@type":"Organization","name":"NEXT GROWTH ／ BURNING BROS."},"areaServed":"JP"}
+{"@context":"https://schema.org","@type":"Service","serviceType":"業務システム受託開発（台帳・配車・点呼・請求・日報）","provider":{"@type":"Organization","name":"株式会社MIMORIA"},"areaServed":"JP"}
 </script>
 <style>
 /* tokens: comp-2 (2026-11-03) からPIL実測。カンプ1920px幅→1280px表示は×0.667換算 */
@@ -80,7 +80,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
 .hero .note.chk::before{content:"";position:absolute;left:15px;top:13px;width:9px;height:5px;border-left:2px solid var(--c-accent);border-bottom:2px solid var(--c-accent);transform:rotate(-45deg)}
 .hero .note.op{margin-block-start:12px;font-size:12.5px}
 .hero-photo{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--c-band);aspect-ratio:3/2}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:100% 40%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
 @media(min-width:900px){.hero-photo{aspect-ratio:auto;min-height:420px}}
 /* grids / cards */
 .grid3{display:grid;gap:var(--sp-2);margin-block-start:var(--sp-4)}
@@ -220,9 +220,9 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
       <a class="btn btn-ghost" href="#price">料金を見る</a>
     </div>
     <p class="note chk">仕様1枚合意してから着手 ／ データは御社のもの（いつでもCSVで全件持ち出し可）</p>
-    <p class="note op">運営：山口県岩国市で実際に軽貨物運送を営む NEXT GROWTH ／ BURNING BROS.。現場の非効率を自分たちで潰してきた"当事者"がつくります。</p>
+    <p class="note op">運営：株式会社MIMORIA（神奈川県横浜市）。現場の非効率を自分たちで潰してきた"当事者"がつくります。</p>
    </div>
-    <figure class="hero-photo"><img src="hero-driver.webp" alt="白い軽バンの横に立つ、作業着と帽子のドライバー" width="1440" height="960" fetchpriority="high"></figure>
+    <figure class="hero-photo"><img src="hero-field.webp" alt="建設現場でスマートフォンの工程アプリを確認する、ヘルメットを着けた現場監督" width="1440" height="960" fetchpriority="high"></figure>
   </div>
 </section>
 
@@ -231,7 +231,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <span class="eyebrow">Before → After</span>
     <h2><span class="ph">紙とExcelの管理を、</span><span class="ph">現場のスマホ1つに。</span></h2>
     <div class="before-after">
-      <div class="ba bef reveal"><div class="lb">BEFORE</div><ul><li>免許・車検の期限をExcelで手管理</li><li>更新漏れに気づくのは指摘されてから</li><li>事務所のPCでしか見られない</li></ul></div>
+      <div class="ba bef reveal"><div class="lb">BEFORE</div><ul><li>資格・免許・健診の期限をExcelで手管理</li><li>更新漏れに気づくのは指摘されてから</li><li>事務所のPCでしか見られない</li></ul></div>
       <div class="arrow" aria-hidden="true">→</div>
       <div class="ba aft reveal"><div class="lb">AFTER</div><ul><li>期限が近いと自動で色つき警告</li><li>現場がスマホでその場入力</li><li>いつでもCSVでExcelに戻せる</li></ul></div>
     </div>
@@ -241,23 +241,23 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
 <section id="demo" class="demo">
   <div class="container">
     <span class="eyebrow">実物を触ってください</span>
-    <h2>ドライバー台帳のデモ（期限アラート付き）</h2>
-    <p class="lead">当社が作る業務システムのサンプルです（架空の会社）。免許・車検・保険の期限が色で警告され、CSVでも出せます。乗務員を追加・編集して、スマホでの使い心地を確かめてください。</p>
+    <h2>職人・現場台帳のデモ（期限アラート付き）</h2>
+    <p class="lead">当社が作る業務システムのサンプルです（架空の会社）。資格・健康診断・安全講習の期限が色で警告され、CSVでも出せます。職人を追加・編集して、スマホでの使い心地を確かめてください。</p>
     <div class="panel">
       <div class="ledger" data-added>
-        <div class="ledger-hd"><b><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="2.5" width="15" height="15" rx="3"/><path d="M2.5 7.5h15M7.5 7.5v10"/></svg>ドライバー台帳</b><span>みなと運輸（架空の会社）のサンプル画面</span></div>
+        <div class="ledger-hd"><b><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="2.5" width="15" height="15" rx="3"/><path d="M2.5 7.5h15M7.5 7.5v10"/></svg>職人・現場台帳</b><span>さくら工務店（架空の会社）のサンプル画面</span></div>
         <table>
-          <thead><tr><th>氏名</th><th>免許期限</th><th>車検</th><th>保険</th><th>状態</th></tr></thead>
+          <thead><tr><th>氏名</th><th>資格期限</th><th>健康診断</th><th>安全講習</th><th>状態</th></tr></thead>
           <tbody>
-            <tr><td class="nm">山本 健二</td><td class="d"><span class="k">免許期限</span>2029/04/18</td><td class="d"><span class="k">車検</span>2027/06/30</td><td class="d"><span class="k">保険</span>2027/03/31</td><td class="st"><span class="chip ok">正常</span></td></tr>
-            <tr><td class="nm">松田 誠</td><td class="d due"><span class="k">免許期限</span>2026/12/05</td><td class="d"><span class="k">車検</span>2027/09/14</td><td class="d"><span class="k">保険</span>2027/03/31</td><td class="st"><span class="chip warn">期限間近</span></td></tr>
-            <tr><td class="nm">高橋 和也</td><td class="d"><span class="k">免許期限</span>2028/08/22</td><td class="d due"><span class="k">車検</span>2026/11/26</td><td class="d"><span class="k">保険</span>2027/03/31</td><td class="st"><span class="chip warn">期限間近</span></td></tr>
-            <tr><td class="nm">伊藤 直美</td><td class="d"><span class="k">免許期限</span>2030/01/09</td><td class="d"><span class="k">車検</span>2027/05/20</td><td class="d"><span class="k">保険</span>2027/03/31</td><td class="st"><span class="chip ok">正常</span></td></tr>
+            <tr><td class="nm">田中 大輔</td><td class="d"><span class="k">資格期限</span>2029/04/18</td><td class="d"><span class="k">健康診断</span>2027/06/30</td><td class="d"><span class="k">安全講習</span>2027/03/31</td><td class="st"><span class="chip ok">正常</span></td></tr>
+            <tr><td class="nm">佐藤 健一</td><td class="d due"><span class="k">資格期限</span>2026/12/05</td><td class="d"><span class="k">健康診断</span>2027/09/14</td><td class="d"><span class="k">安全講習</span>2027/03/31</td><td class="st"><span class="chip warn">期限間近</span></td></tr>
+            <tr><td class="nm">鈴木 翔太</td><td class="d"><span class="k">資格期限</span>2028/08/22</td><td class="d due"><span class="k">健康診断</span>2026/11/26</td><td class="d"><span class="k">安全講習</span>2027/03/31</td><td class="st"><span class="chip warn">期限間近</span></td></tr>
+            <tr><td class="nm">伊藤 直美</td><td class="d"><span class="k">資格期限</span>2030/01/09</td><td class="d"><span class="k">健康診断</span>2027/05/20</td><td class="d"><span class="k">安全講習</span>2027/03/31</td><td class="st"><span class="chip ok">正常</span></td></tr>
           </tbody>
         </table>
       </div>
     <a class="box" href="https://gyomu-demo.pages.dev/" target="_blank" rel="noopener">
-      <span><b>ドライバー台帳｜みなと運輸</b><small>期限アラート・CSV出力・スマホ完結（架空・デモ）</small></span>
+      <span><b>台帳デモ（実物）</b><small>期限アラート・CSV出力・スマホ完結（架空・デモ）</small></span>
       <span class="btn btn-primary">デモを開く →</span>
     </a>
     </div>
@@ -326,7 +326,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <span class="eyebrow">お問い合わせ</span>
     <h2><span class="ph">まず、御社のExcelを</span><span class="ph">見せてください。</span></h2>
     <p class="lead" style="margin-inline:auto">「これ、システムにできる？」の一言からで大丈夫です。無理な案件は正直に「向いていません」とお伝えします。</p>
-    <!-- フォーム送信は formsubmit.co 経由で next.growth0913@gmail.com へ届きます。
+    <!-- フォーム送信は formsubmit.co 経由で mimoria.inc@gmail.com へ届きます。
          初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。 -->
     <form class="inq" id="inquiry-form" novalidate>
       <div class="fld">
@@ -367,7 +367,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
       </div>
       <button type="submit" class="btn btn-primary submit" id="f-submit">この内容で相談する</button>
       <p class="msg" id="f-msg" role="status" aria-live="polite"></p>
-      <p class="fineprint">フォームが送信できない場合は、メール <a href="mailto:next.growth0913@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">next.growth0913@gmail.com</a> へ直接ご連絡いただくか、<a href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEでのご相談</a>も可能です。</p>
+      <p class="fineprint">フォームが送信できない場合は、メール <a href="mailto:mimoria.inc@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">mimoria.inc@gmail.com</a> へ直接ご連絡いただくか、<a href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEでのご相談</a>も可能です。</p>
     </form>
   </div>
 </section>
@@ -377,20 +377,20 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <span class="eyebrow">運営者情報</span>
     <h2>運営者について</h2>
     <dl>
-      <div class="row"><dt>事業者名</dt><dd>NEXT GROWTH ／ BURNING BROS.</dd></div>
-      <div class="row"><dt>所在地</dt><dd>山口県岩国市</dd></div>
+      <div class="row"><dt>事業者名</dt><dd>株式会社MIMORIA</dd></div>
+      <div class="row"><dt>所在地</dt><dd>神奈川県横浜市</dd></div>
       <div class="row"><dt>電話</dt><dd><a href="tel:08089560913">080-8956-0913</a></dd></div>
-      <div class="row"><dt>メール</dt><dd><a href="mailto:next.growth0913@gmail.com">next.growth0913@gmail.com</a></dd></div>
-      <div class="row"><dt>事業内容</dt><dd>業務システム受託開発サービス「BURNING WORKS」の運営（ドライバー台帳・配車・点呼記録・請求・日報のシステム開発）</dd></div>
+      <div class="row"><dt>メール</dt><dd><a href="mailto:mimoria.inc@gmail.com">mimoria.inc@gmail.com</a></dd></div>
+      <div class="row"><dt>事業内容</dt><dd>業務システム受託開発サービス「BURNING WORKS」の運営（台帳・請求・日報など現場系業務のシステム開発。運送向けの配車・点呼記録にも対応）</dd></div>
     </dl>
     <p class="fineprint">データは御社のもので、いつでもCSVで全件持ち出し可能です。掲載のデモは架空の会社のサンプルです。</p>
   </div>
 </section>
 
 <footer class="ft"><div class="container">
-  <p>BURNING WORKS ／ 業務システム受託開発（台帳・配車・点呼・請求・日報）｜NEXT GROWTH ／ BURNING BROS.</p>
+  <p>BURNING WORKS ／ 業務システム受託開発（台帳・配車・点呼・請求・日報）｜株式会社MIMORIA</p>
   <p style="margin-block-start:8px">技術：Cloudflare Pages / Workers / D1。掲載のデモは架空の会社のサンプルです。</p>
-  <p style="margin-block-start:8px;font-size:13px">お問い合わせ：電話 <a href="tel:08089560913">080-8956-0913</a>／メール <a href="mailto:next.growth0913@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">next.growth0913@gmail.com</a></p>
+  <p style="margin-block-start:8px;font-size:13px">お問い合わせ：電話 <a href="tel:08089560913">080-8956-0913</a>／メール <a href="mailto:mimoria.inc@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">mimoria.inc@gmail.com</a></p>
   <nav class="links">
     <a href="#contact">お問い合わせフォーム</a>
     <a href="#faq">よくある質問</a>
@@ -434,7 +434,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       '相談内容':document.getElementById('f-message').value.trim()
     };
     btn.disabled=true;btn.textContent='送信中…';
-    fetch('https://formsubmit.co/ajax/next.growth0913@gmail.com',{
+    fetch('https://formsubmit.co/ajax/mimoria.inc@gmail.com',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(data)
@@ -446,7 +446,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       show('送信しました。内容を確認のうえ、担当よりご連絡します。無理な案件は正直に「向いていません」とお伝えします。',true);
       form.reset();
     }).catch(function(){
-      show('送信に失敗しました。お手数ですが、メール next.growth0913@gmail.com へ直接ご連絡ください。',false);
+      show('送信に失敗しました。お手数ですが、メール mimoria.inc@gmail.com へ直接ご連絡ください。',false);
     }).finally(function(){
       btn.disabled=false;btn.textContent='この内容で相談する';
     });
