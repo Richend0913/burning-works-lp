@@ -359,8 +359,9 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <span class="eyebrow">お問い合わせ</span>
     <h2><span class="ph">まず、御社のExcelを</span><span class="ph">見せてください。</span></h2>
     <p class="lead" style="margin-inline:auto">「これ、システムにできる？」の一言からで大丈夫です。無理な案件は正直に「向いていません」とお伝えします。</p>
-    <!-- フォーム送信は formsubmit.co 経由で info@mimoria.jp へ届きます。
-         初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。
+    <!-- フォーム送信は 1) mimoria-forms Worker（KV保存）を優先し、失敗時（通信エラー・非2xx）のみ
+         2) formsubmit.co 経由で info@mimoria.jp へ送るフォールバックに切り替わります。
+         フォールバック経路について：初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。
          送信者への自動返信（_autoresponse）も、この一度きりの有効化の後から送られるようになります。 -->
     <form class="inq" id="inquiry-form" novalidate>
       <div class="fld">
@@ -470,13 +471,21 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       '相談内容':document.getElementById('f-message').value.trim()
     };
     btn.disabled=true;btn.textContent='送信中…';
-    fetch('https://formsubmit.co/ajax/info@mimoria.jp',{
+    fetch('https://mimoria-forms.burningbros.workers.dev/v1/form',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(data)
+      body:JSON.stringify({lp:'works',fields:data})
     }).then(function(res){
       if(!res.ok)throw new Error('HTTP '+res.status);
-      return res.json();
+    }).catch(function(){
+      return fetch('https://formsubmit.co/ajax/info@mimoria.jp',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(data)
+      }).then(function(res){
+        if(!res.ok)throw new Error('HTTP '+res.status);
+        return res.json();
+      });
     }).then(function(){
       if(window.gtag)gtag('event','inquiry_submit',{page_area:'burning-works'});
       show('送信しました。内容を確認のうえ、担当よりご連絡します。無理な案件は正直に「向いていません」とお伝えします。',true);
