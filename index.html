@@ -327,7 +327,8 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <h2><span class="ph">まず、御社のExcelを</span><span class="ph">見せてください。</span></h2>
     <p class="lead" style="margin-inline:auto">「これ、システムにできる？」の一言からで大丈夫です。無理な案件は正直に「向いていません」とお伝えします。</p>
     <!-- フォーム送信は formsubmit.co 経由で info@mimoria.jp へ届きます。
-         初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。 -->
+         初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。
+         送信者への自動返信（_autoresponse）も、この一度きりの有効化の後から送られるようになります。 -->
     <form class="inq" id="inquiry-form" novalidate>
       <div class="fld">
         <label for="f-company">会社名<span class="req">必須</span></label>
@@ -426,6 +427,8 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     var data={
       _subject:'BURNING WORKS 相談（LPフォーム）',
       _template:'table',
+      _replyto:document.getElementById('f-email').value.trim(),
+      _autoresponse:'BURNING WORKS へのご相談ありがとうございます。株式会社MIMORIA です。\n\nご相談フォームの送信を受け付けました。\n内容を確認のうえ、1営業日以内に担当よりご連絡いたします。\n次回のご連絡では、御社のExcel・帳票など現物を見せていただく「現物ヒアリング」の日程候補をお伺いします。\n\nお急ぎの場合は info@mimoria.jp へ直接ご連絡ください。\n※このメールは自動送信です。',
       '会社名':document.getElementById('f-company').value.trim(),
       '担当者名':document.getElementById('f-name').value.trim(),
       'メールアドレス':document.getElementById('f-email').value.trim(),
