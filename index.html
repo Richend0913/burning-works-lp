@@ -326,7 +326,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
     <span class="eyebrow">お問い合わせ</span>
     <h2><span class="ph">まず、御社のExcelを</span><span class="ph">見せてください。</span></h2>
     <p class="lead" style="margin-inline:auto">「これ、システムにできる？」の一言からで大丈夫です。無理な案件は正直に「向いていません」とお伝えします。</p>
-    <!-- フォーム送信は formsubmit.co 経由で mimoria.inc@gmail.com へ届きます。
+    <!-- フォーム送信は formsubmit.co 経由で info@mimoria.jp へ届きます。
          初回送信時に formsubmit から有効化（activation）メールがその受信箱に届くので、運営側で一度だけリンクをクリックして有効化してください。 -->
     <form class="inq" id="inquiry-form" novalidate>
       <div class="fld">
@@ -367,7 +367,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
       </div>
       <button type="submit" class="btn btn-primary submit" id="f-submit">この内容で相談する</button>
       <p class="msg" id="f-msg" role="status" aria-live="polite"></p>
-      <p class="fineprint">フォームが送信できない場合は、メール <a href="mailto:mimoria.inc@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">mimoria.inc@gmail.com</a> へ直接ご連絡いただくか、<a href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEでのご相談</a>も可能です。</p>
+      <p class="fineprint">フォームが送信できない場合は、メール <a href="mailto:info@mimoria.jp?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">info@mimoria.jp</a> へ直接ご連絡いただくか、<a href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEでのご相談</a>も可能です。</p>
     </form>
   </div>
 </section>
@@ -380,7 +380,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
       <div class="row"><dt>事業者名</dt><dd>株式会社MIMORIA</dd></div>
       <div class="row"><dt>所在地</dt><dd>神奈川県横浜市</dd></div>
       <div class="row"><dt>電話</dt><dd><a href="tel:08089560913">080-8956-0913</a></dd></div>
-      <div class="row"><dt>メール</dt><dd><a href="mailto:mimoria.inc@gmail.com">mimoria.inc@gmail.com</a></dd></div>
+      <div class="row"><dt>メール</dt><dd><a href="mailto:info@mimoria.jp">info@mimoria.jp</a></dd></div>
       <div class="row"><dt>事業内容</dt><dd>業務システム受託開発サービス「BURNING WORKS」の運営（台帳・請求・日報など現場系業務のシステム開発。運送向けの配車・点呼記録にも対応）</dd></div>
     </dl>
     <p class="fineprint">データは御社のもので、いつでもCSVで全件持ち出し可能です。掲載のデモは架空の会社のサンプルです。</p>
@@ -390,7 +390,7 @@ section{padding-block:var(--sp-8)}@media(min-width:768px){section{padding-block:
 <footer class="ft"><div class="container">
   <p>BURNING WORKS ／ 業務システム受託開発（台帳・配車・点呼・請求・日報）｜株式会社MIMORIA</p>
   <p style="margin-block-start:8px">技術：Cloudflare Pages / Workers / D1。掲載のデモは架空の会社のサンプルです。</p>
-  <p style="margin-block-start:8px;font-size:13px">お問い合わせ：電話 <a href="tel:08089560913">080-8956-0913</a>／メール <a href="mailto:mimoria.inc@gmail.com?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">mimoria.inc@gmail.com</a></p>
+  <p style="margin-block-start:8px;font-size:13px">お問い合わせ：電話 <a href="tel:08089560913">080-8956-0913</a>／メール <a href="mailto:info@mimoria.jp?subject=BURNING%20WORKS%20%E7%9B%B8%E8%AB%87">info@mimoria.jp</a></p>
   <nav class="links">
     <a href="#contact">お問い合わせフォーム</a>
     <a href="#faq">よくある質問</a>
@@ -434,7 +434,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       '相談内容':document.getElementById('f-message').value.trim()
     };
     btn.disabled=true;btn.textContent='送信中…';
-    fetch('https://formsubmit.co/ajax/mimoria.inc@gmail.com',{
+    fetch('https://formsubmit.co/ajax/info@mimoria.jp',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(data)
@@ -446,7 +446,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       show('送信しました。内容を確認のうえ、担当よりご連絡します。無理な案件は正直に「向いていません」とお伝えします。',true);
       form.reset();
     }).catch(function(){
-      show('送信に失敗しました。お手数ですが、メール mimoria.inc@gmail.com へ直接ご連絡ください。',false);
+      show('送信に失敗しました。お手数ですが、メール info@mimoria.jp へ直接ご連絡ください。',false);
     }).finally(function(){
       btn.disabled=false;btn.textContent='この内容で相談する';
     });
